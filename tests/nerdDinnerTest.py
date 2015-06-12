@@ -3,7 +3,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-class nerdDInner(unittest.TestCase):
+class openPage(unittest.TestCase):
 
 	def setUp(self):
 		self.driver = webdriver.Firefox()

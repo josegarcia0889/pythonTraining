@@ -6,11 +6,14 @@ from pythonTraining.commons.testBase import testBase
 class Utilities(testBase):
 
     def home_page(self):
-        driver = self.setUp
+        driver = testBase.setUp(self)
 
-        self.driver.get("http://nerddinner.com", self)
+        self.driver.get("http://nerddinner.com")
 
-        self.assertIn("Nerd Dinner", driver.title)
+
+        driver.assertIn("Nerd Dinner", driver.title)
+
+        self.driver.assertIn("Nerd Dinner", driver.title)
 
         driver.maximize_window()
 

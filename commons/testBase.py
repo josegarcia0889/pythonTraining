@@ -1,11 +1,12 @@
 __author__ = 'jgarcia'
-import unittest
+
 from selenium import webdriver
 
-class testBase(unittest.TestCase):
+class testBase():
 
-  def setUp(self):
+    def setUp(self):
         self.driver = webdriver.Firefox()
 
-  def tearDown(self):
-     self.driver.close()
+
+    def tearDown(self):
+        self.driver.close()

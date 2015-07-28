@@ -1,10 +1,18 @@
 __author__ = 'jgarcia'
 
-class utilities(object):
+from pythonTraining.commons.testBase import testBase
 
-  def HomePage(self):
-        driver = self.driver
-        driver.get("http://nerddinner.com")
+
+class utilities(testBase):
+
+
+    def __init__(self):
+        pass
+
+    def homePage(self):
+        driver = self.setUp
+
+        self.driver.get("http://nerddinner.com")
 
         self.assertIn("Nerd Dinner", driver.title)
 

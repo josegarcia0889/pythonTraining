@@ -1,20 +1,22 @@
 __author__ = 'jgarcia'
 
-from pythonTraining.commons.testBase import testBase
+import unittest
+from pythonTraining.commons.testBase import Base
 
 
-class Utilities(testBase):
+class Utilities(Base, unittest.TestCase):
+    def __init__(self):
+        self.driver = None
 
-    def home_page(self):
-        driver = testBase.setUp(self)
+    def home_page(self, driver2):
+        self.driver = driver2
 
         self.driver.get("http://nerddinner.com")
 
+        self.driver.maximize_window()
 
-        driver.assertIn("Nerd Dinner", driver.title)
+        self.assertIn(self.driver.title, "Nerd Dinner")
 
-        self.driver.assertIn("Nerd Dinner", driver.title)
+        assert "No results found." not in self.driver.page_source
 
-        driver.maximize_window()
 
-        assert "No results found." not in driver.page_source

@@ -5,6 +5,7 @@ __author__ = 'jgarcia'
 from pythonTraining.pages.commons.loginBasePage import LogInBasePage
 from pythonTraining.commons.testBase import Base
 from pythonTraining.commons.utilities import Utilities
+from random import random
 
 
 class LoginPage(LogInBasePage):
@@ -34,6 +35,35 @@ class LoginPage(LogInBasePage):
         self.validate_wrong_username_password()
 
         Base().tearDown(self.driver)
+
+
+    def registerScreen_Displayed(self):
+        self.driver = Base().setUp()
+
+        self.utilities.home_page(self.driver)
+        self.open_logOn_Screen()
+        self.open_register_screen()
+
+        Base().tearDown(self.driver)
+
+
+    def successfully_register_user(self):
+        self.driver = Base().setUp()
+
+        self.utilities.home_page(self.driver)
+        self.open_logOn_Screen()
+        self.open_register_screen()
+
+        username ="jgarcia"+str(random())
+
+        self.registerForm_fillIn(username,"jgarcia+"+str(random())+"@wearegap.com","123456")
+        self.click_registerButton()
+
+        self.verify_logged_user(username)
+
+        Base().tearDown(self.driver)
+
+
 
 
 

@@ -13,13 +13,31 @@ class LoginPage(LogInBasePage):
 
         self.driver = None
 
-    def login_successfully(self):
-
+    def login_requiredFields(self):
         self.driver = Base().setUp()
 
         self.utilities.home_page(self.driver)
+        self.open_logOn_Screen()
+        self.click_logOn_button()
+        self.validate_required_fields()
 
-        self.open_logOn_Screen(self.driver)
+        Base().tearDown(self.driver)
+
+
+    def login_wrongUsername_Password(self):
+        self.driver = Base().setUp()
+
+        self.utilities.home_page(self.driver)
+        self.open_logOn_Screen()
+        self.write_username_password('UserTest', '123')
+        self.click_logOn_button()
+        self.validate_wrong_username_password()
+
+        Base().tearDown(self.driver)
+
+
+
+
 
 
 

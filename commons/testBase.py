@@ -12,5 +12,6 @@ class Base():
         return self.driver
 
 
-    def tearDown(self):
+    def tearDown(self, driver2):
+        self.driver = driver2
         self.driver.close()

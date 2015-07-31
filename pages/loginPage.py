@@ -6,6 +6,7 @@ from pythonTraining.pages.commons.loginBasePage import LogInBasePage
 from pythonTraining.commons.testBase import Base
 from pythonTraining.commons.utilities import Utilities
 from random import random
+import pythonTraining.commons.properties as property
 
 
 class LoginPage(LogInBasePage):
@@ -24,7 +25,6 @@ class LoginPage(LogInBasePage):
 
         Base().tearDown(self.driver)
 
-
     def login_wrongUsername_Password(self):
         self.driver = Base().setUp()
 
@@ -36,6 +36,16 @@ class LoginPage(LogInBasePage):
 
         Base().tearDown(self.driver)
 
+    def login_successfully(self):
+        self.driver = Base().setUp()
+
+        self.utilities.home_page(self.driver)
+        self.open_logOn_Screen()
+        self.write_username_password(property.test_username,property.test_password)
+        self.click_logOn_button()
+        self.verify_logged_user(property.test_username)
+
+        Base().tearDown(self.driver)
 
     def registerScreen_Displayed(self):
         self.driver = Base().setUp()
@@ -46,8 +56,7 @@ class LoginPage(LogInBasePage):
 
         Base().tearDown(self.driver)
 
-
-    def successfully_register_user(self):
+    def register_user_successfully(self):
         self.driver = Base().setUp()
 
         self.utilities.home_page(self.driver)

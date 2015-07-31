@@ -2,6 +2,7 @@ __author__ = 'jgarcia'
 
 import unittest
 from pythonTraining.commons.testBase import Base
+import properties as property
 
 
 class Utilities(Base, unittest.TestCase):
@@ -11,7 +12,7 @@ class Utilities(Base, unittest.TestCase):
     def home_page(self, driver2):
         self.driver = driver2
 
-        self.driver.get("http://nerddinner.com")
+        self.driver.get(property.qa_site)
 
         self.driver.maximize_window()
 

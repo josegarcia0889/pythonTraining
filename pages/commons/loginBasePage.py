@@ -10,12 +10,9 @@ class LogInBasePage(object):
 
         elem = self.driver.find_element_by_css_selector("div[id='logindisplay']>a")
 
-        # elem = self.driver.find_element_by_xpath(".//*[@id='logindisplay']/a")
-
         elem.click()
 
         assert self.driver.find_element_by_id("login-account").is_displayed()
-
 
     def click_logOn_button(self):
         logonButton = self.driver.find_element_by_class_name("classiclogon")
@@ -34,14 +31,12 @@ class LogInBasePage(object):
         assert passwordField.get_attribute("class") == ("input-validation-error")
         assert errorText[1].text == ("The Password: field is required.")
 
-
     def write_username_password(self, user, passw):
         self.driver.find_element_by_id("UserName").is_displayed()
         self.driver.find_element_by_id("Password").is_displayed()
 
         self.driver.find_element_by_id("UserName").send_keys(user)
         self.driver.find_element_by_id("Password").send_keys(passw)
-
 
     def validate_wrong_username_password(self):
         assert self.driver.find_element_by_class_name("validation-summary-errors").is_displayed()
@@ -69,9 +64,12 @@ class LogInBasePage(object):
         self.driver.find_element_by_id("ConfirmPassword").send_keys(password)
 
     def click_registerButton(self):
-        assert self.driver.find_element_by_css_selector("div[id='main']>form>div>fieldset>p>input[type='submit']").is_displayed()
+        assert self.driver.find_element_by_css_selector(
+            "div[id='main']>form>div>fieldset>p>input[type='submit']").is_displayed()
         self.driver.find_element_by_css_selector("div[id='main']>form>div>fieldset>p>input[type='submit']").click()
 
     def verify_logged_user(self, username):
         assert self.driver.find_element_by_id("logindisplay").is_displayed()
         assert self.driver.find_element_by_id("logindisplay").text == ("Welcome " + username + "! [ Log Off ]")
+
+

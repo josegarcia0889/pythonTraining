@@ -15,6 +15,7 @@ class RegisterUserPage(RegisterUserBasePage):
         self.driver = None
 
         self.loginbasepg = LogInBasePage()
+
         self.registerbasepg = RegisterUserBasePage()
 
     def registerScreen_Displayed(self):

@@ -5,7 +5,8 @@ class RegisterUserBasePage(object):
     def __init__(self):
         self.driver = None
 
-
+    def loadDriver(self,driver2):
+        self.driver = driver2
 
     def open_register_screen(self):
         assert self.driver.find_element_by_css_selector("div[id=login-account]>form>div>p>a").is_displayed()

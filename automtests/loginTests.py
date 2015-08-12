@@ -19,10 +19,4 @@ class Login(unittest.TestCase):
         loginpg = LoginPage()
         loginpg.login_successfully()
 
-    def test_registerScreenDisplayed(self):
-        loginpg = LoginPage()
-        loginpg.registerScreen_Displayed()
 
-    def test_registerUser_successfully(self):
-        loginpg = LoginPage()
-        loginpg.register_user_successfully()

@@ -1,5 +1,3 @@
-from gluon.html import B
-
 __author__ = 'jgarcia'
 
 from pythonTraining.pages.commons.loginBasePage import LogInBasePage
@@ -47,30 +45,7 @@ class LoginPage(LogInBasePage):
 
         Base().tearDown(self.driver)
 
-    def registerScreen_Displayed(self):
-        self.driver = Base().setUp()
 
-        self.utilities.home_page(self.driver)
-        self.open_logOn_Screen()
-        self.open_register_screen()
-
-        Base().tearDown(self.driver)
-
-    def register_user_successfully(self):
-        self.driver = Base().setUp()
-
-        self.utilities.home_page(self.driver)
-        self.open_logOn_Screen()
-        self.open_register_screen()
-
-        username ="jgarcia"+str(random())
-
-        self.registerForm_fillIn(username,"jgarcia+"+str(random())+"@wearegap.com","123456")
-        self.click_registerButton()
-
-        self.verify_logged_user(username)
-
-        Base().tearDown(self.driver)
 
 
 

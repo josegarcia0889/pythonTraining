@@ -5,7 +5,6 @@ from pythonTraining.pages.commons.loginBasePage import LogInBasePage
 from pythonTraining.commons.testBase import Base
 from pythonTraining.commons.utilities import Utilities
 from random import random
-#import pythonTraining.commons.properties as property
 
 
 class RegisterUserPage(RegisterUserBasePage):
@@ -18,11 +17,11 @@ class RegisterUserPage(RegisterUserBasePage):
 
         self.registerbasepg = RegisterUserBasePage()
 
-    def registerScreen_Displayed(self):
+    def register_screen_displayed(self):
 
         self.driver = Base().setUp()
 
-        self.loginbasepg.loadDriver(self.driver)
+        self.loginbasepg.load_driver(self.driver)
 
         self.utilities.home_page(self.driver)
         self.loginbasepg.open_logOn_Screen()
@@ -33,7 +32,7 @@ class RegisterUserPage(RegisterUserBasePage):
     def register_user_successfully(self):
         self.driver = Base().setUp()
 
-        self.loginbasepg.loadDriver(self.driver)
+        self.loginbasepg.load_driver(self.driver)
 
         self.utilities.home_page(self.driver)
         self.loginbasepg.open_logOn_Screen()

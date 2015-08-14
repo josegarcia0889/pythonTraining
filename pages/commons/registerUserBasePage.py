@@ -5,7 +5,7 @@ class RegisterUserBasePage(object):
     def __init__(self):
         self.driver = None
 
-    def loadDriver(self,driver2):
+    def load_driver(self,driver2):  # This method works when user calls methods in this class from an external source
         self.driver = driver2
 
     def open_register_screen(self):

@@ -12,7 +12,7 @@ class Utilities(Base, unittest.TestCase):
     def home_page(self, driver2):
         self.driver = driver2
 
-        self.driver.get(property.qa_site)
+        self.driver.get(property.qa_site)  # Get qa_site property from Properties file and Open the browser
 
         self.driver.maximize_window()
 

@@ -8,10 +8,10 @@ class Base():
         pass
 
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Firefox()  # Browser driver is set
 
         return self.driver
 
-    def tearDown(self, driver2):
+    def tearDown(self, driver2):  # Driver is closed after a test is finished
         self.driver = driver2
         self.driver.close()

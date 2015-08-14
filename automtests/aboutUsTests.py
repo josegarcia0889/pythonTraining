@@ -6,7 +6,7 @@ import unittest
 from pythonTraining.pages.aboutUsPage import AboutUsPage
 
 
-class Login(unittest.TestCase):
+class AboutUs(unittest.TestCase):
 
     def test_aboutUs_screenDisplayed(self):
         aboutpg = AboutUsPage()

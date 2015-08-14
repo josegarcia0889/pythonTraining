@@ -3,7 +3,6 @@ __author__ = 'jgarcia'
 from pythonTraining.pages.commons.loginBasePage import LogInBasePage
 from pythonTraining.commons.testBase import Base
 from pythonTraining.commons.utilities import Utilities
-from random import random
 import pythonTraining.commons.properties as property
 
 

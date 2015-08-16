@@ -17,8 +17,6 @@ class AboutUsBasePage(object):
 
         tabs_options[index].click()
 
-
-    #  img[src^='/Content/Img/icon']
     def verify_aboutUs_screenDisplayed(self):
         assert "No results found." not in self.driver.page_source
 

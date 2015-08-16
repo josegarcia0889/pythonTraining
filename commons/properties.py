@@ -8,3 +8,9 @@ test_username = "testUser0889"  # Testing user
 
 test_password = "123456"  # Password for Testing user
 
+#  Home images URLs
+oDataFeed = "http://nerddinner.com/Content/Img/icon-odatafeed-28x28.png"
+rss = "http://nerddinner.com/Content/Img/icon-feed-28x28.png"
+calfeed = "http://nerddinner.com/Content/Img/icon-icalfeed-28x28.png"
+
+

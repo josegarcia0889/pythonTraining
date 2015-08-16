@@ -15,7 +15,7 @@ class AboutUsPage(AboutUsBasePage):
         self.driver = Base().setUp()
 
         self.utilities.home_page(self.driver)
-        self.click_aboutUs_tab()
+        self.click_tab(2)
         self.verify_aboutUs_screenDisplayed()
 
         Base().tearDown(self.driver)

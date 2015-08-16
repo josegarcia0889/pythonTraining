@@ -8,17 +8,15 @@ class AboutUsBasePage(object):
     def load_driver(self, driver2):  # This method works when user calls methods in this class from an external source
         self.driver = driver2
 
-    # def click_aboutUs_tab(self):
-    #      assert self.driver.find_element_by_css_selector("a[href='/Home/About']").is_displayed()
-    #     elem = self.driver.find_element_by_css_selector("a[href='/Home/About']")
-    #    elem.click()
-
-    def click_aboutUs_tab(self):
+    def click_tab(self, index):
         assert self.driver.find_element_by_id("menu").is_displayed()
 
         elem_menu = self.driver.find_element_by_id("menu")
 
-        elem_menu.find_element_by_css_selector("[href='/Home/About']").click()
+        tabs_options = elem_menu.find_elements_by_css_selector("li>a")
+
+        tabs_options[index].click()
+
 
     #  img[src^='/Content/Img/icon']
     def verify_aboutUs_screenDisplayed(self):

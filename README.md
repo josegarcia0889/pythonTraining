@@ -8,6 +8,16 @@ TECHNOLOGIES:
 
 ___________________________________________________________________________________
 MODULES:
+ 
+ Commons:
+ - pythonTraining/commons/properties.py
+ - pythonTraining/commons/testBase.py
+ - pythonTraining/commons/utilities.py
+ 
+ Home:
+ - pythonTraining/pythonTraining/automtests/homeTests.py
+ - pythonTraining/pythonTraining/pages/homePage.py
+ - pythonTraining/pythonTraining/pages/commons/homeBasePage.py
 
  Login User:
  - pythonTraining/automtests/loginTests.py
@@ -23,8 +33,3 @@ MODULES:
  - pythonTraining/automtests/aboutUsTests.py
  - pythonTraining/pages/aboutUsPage.py
  - pythonTraining/pages/commons/aboutUsBasePage.py
- 
- Commons:
- - pythonTraining/commons/properties.py
- - pythonTraining/commons/testBase.py
- - pythonTraining/commons/utilities.py

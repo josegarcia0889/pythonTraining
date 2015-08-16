@@ -5,7 +5,7 @@ from selenium import webdriver
 
 class Base():
     def __init__(self):
-        pass
+        self.driver = None
 
     def setUp(self):
         self.driver = webdriver.Firefox()  # Browser driver is set

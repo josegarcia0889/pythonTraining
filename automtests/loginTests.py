@@ -9,7 +9,7 @@ class Login(unittest.TestCase):
 
     def test_login_requiredFields(self):  # This test case verifies required fields on Login screen
         loginpg = LoginPage()
-        loginpg.login_requiredFields()
+        loginpg.login_required_fields()
 
     def test_login_wrongUsername_Password(self):  # This test case verifies user can not login with wrong username
         loginpg = LoginPage()

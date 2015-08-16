@@ -9,10 +9,9 @@ import pythonTraining.commons.properties as property
 class LoginPage(LogInBasePage):
     def __init__(self):
         self.utilities = Utilities()
-
         self.driver = None
 
-    def login_requiredFields(self):
+    def login_required_fields(self):
         self.driver = Base().setUp()
 
         self.utilities.home_page(self.driver)

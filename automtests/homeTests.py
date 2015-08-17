@@ -5,7 +5,7 @@ import unittest
 from pythonTraining.pages.homePage import HomePage
 
 
-class AboutUs(unittest.TestCase):
+class Home(unittest.TestCase):
 
     def test_compareimages(self):
         aboutpg = HomePage()

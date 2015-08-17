@@ -7,6 +7,6 @@ from pythonTraining.pages.homePage import HomePage
 
 class AboutUs(unittest.TestCase):
 
-    def test_aboutUs_screenDisplayed(self):
+    def test_compareimages(self):
         aboutpg = HomePage()
         aboutpg.compare_img_url()
